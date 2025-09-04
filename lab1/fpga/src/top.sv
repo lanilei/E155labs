@@ -1,7 +1,9 @@
-// lab 1: FPGA and MCU setup and testing
+// lab 1: FPGA and MCU setup and testing 
+//Top Module calls upon  LEDs and SevenSeg modules
 // Leilani Elkaslasy
 //lelkaslasy@g.hmc.edu
 // 09/04/25
+
 module top( input logic     [3:0]s,
 			input logic     reset,
 			output logic    [2:0]led,
@@ -14,7 +16,6 @@ module top( input logic     [3:0]s,
 
 	 sevenseg seven( s,
 			        seg   );
-
  // cal leds
  leds ledss (s,
 			reset,

@@ -1,14 +1,19 @@
-//lab 1 leilani elkaslasy
+// lab 1: FPGA and MCU setup and testing 
+//seven seg has the inverted hex for driving the seven segment display
+// Leilani Elkaslasy
+//lelkaslasy@g.hmc.edu
+// 09/04/25
 // seven segment display hex
 module sevenseg ( input logic [3:0]s,
 			   output logic [6:0]seg );
 
-
+		//combinational logic to assign inputs 4 binary bit inputs  
+		// to single  hex digit seven segment display outputs
 		always_comb
 		 case (s)
-			4'b1111 : seg =7'b1000000; //0
+			4'b1111 : seg = 7'b1000000; //0
 			4'b1110 : seg = 7'b1111001; //1
-			4'b1101 : seg =7'b0100100; //2
+			4'b1101 : seg = 7'b0100100; //2
 			4'b1100 : seg = 7'b0110000; //3
 			4'b1011 : seg = 7'b0011001; //4
 			4'b1010 : seg = 7'b0010010; //5
@@ -16,7 +21,7 @@ module sevenseg ( input logic [3:0]s,
 			4'b1000 : seg = 7'b1111000; //7
 			4'b0111 : seg = 7'b1111111; //8
 			4'b0110 : seg = 7'b0011000; //9
-			4'b0101: seg = 7'b0001000; //10
+			4'b0101: seg  = 7'b0001000; //10
 			4'b0100 : seg = 7'b0000011; //11
 			4'b0011 : seg = 7'b1000110; //12
 			4'b0010 : seg = 7'b0100001; //13
@@ -24,4 +29,4 @@ module sevenseg ( input logic [3:0]s,
 			4'b0000 : seg = 7'b0001110; //15
 		 default    : seg = 7'b1111111; // all off
 		endcase
-   endmodule
+ endmodule

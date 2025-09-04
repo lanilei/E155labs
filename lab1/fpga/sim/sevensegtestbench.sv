@@ -1,3 +1,9 @@
+// lab 1: FPGA and MCU setup and testing 
+//This module tests the seven segment display 
+// Leilani Elkaslasy
+//lelkaslasy@g.hmc.edu
+// 09/04/25
+
 //Modelsim-ASE requires a timescale directive
 `timescale 1 ns / 1 ns
 

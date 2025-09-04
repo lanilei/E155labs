@@ -1,3 +1,10 @@
+// lab 1: FPGA and MCU setup and testing 
+//LEDs module uses an And gate for LED 1 and a XOR gate for LED 0 
+// it also establishes a counter to oscillate LED 3 at 2.4 Hz
+// Leilani Elkaslasy
+//lelkaslasy@g.hmc.edu
+// 09/04/25
+
 module leds( input logic    [3:0]s,
 			input logic     reset,
 			output logic    [2:0]led);
